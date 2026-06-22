@@ -1,0 +1,153 @@
+/* Variables para un Dark Mode profesional */
+:root {
+    --bg-color: #121212;
+    --panel-bg: #1e1e1e;
+    --text-main: #e0e0e0;
+    --text-muted: #9ca3af;
+    --border-color: #334155;
+    --accent-blue: #2563eb;
+    --accent-hover: #1d4ed8;
+    --row-odd: #18181b;
+    --row-even: #27272a;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-main);
+    margin: 0;
+    font-family: system-ui, -apple-system, sans-serif;
+    -webkit-font-smoothing: antialiased;
+}
+
+main {
+    max-width: 900px;
+    margin: 3rem auto;
+    padding: 0 1.5rem;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 2.5rem;
+}
+
+header h1 {
+    color: #ffffff;
+    margin-bottom: 0.5rem;
+    font-size: 2.2rem;
+}
+
+header p {
+    color: var(--text-muted);
+    font-size: 1.1rem;
+}
+
+/* Estilos del Formulario Semántico */
+fieldset {
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+    padding: 1.8rem;
+    display: flex;
+    gap: 1.5rem;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--panel-bg);
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.3);
+}
+
+legend {
+    font-weight: 600;
+    padding: 0 1rem;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    font-size: 0.85rem;
+    letter-spacing: 0.05em;
+}
+
+label {
+    font-weight: 500;
+    color: var(--text-main);
+}
+
+input[type="date"] {
+    padding: 0.6rem 0.8rem;
+    border-radius: 6px;
+    border: 1px solid var(--border-color);
+    background-color: #0f0f11;
+    color: var(--text-main);
+    font-family: inherit;
+    color-scheme: dark; /* Fuerza al navegador a mostrar el calendario en modo oscuro */
+}
+
+input[type="date"]:focus {
+    outline: 2px solid var(--accent-blue);
+    border-color: transparent;
+}
+
+button {
+    padding: 0.7rem 1.5rem;
+    background-color: var(--accent-blue);
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 1rem;
+    transition: background-color 0.2s ease, transform 0.1s ease;
+}
+
+button:hover {
+    background-color: var(--accent-hover);
+}
+
+button:active {
+    transform: scale(0.98);
+}
+
+/* Estilos de la Tabla */
+article h2 {
+    margin-top: 3rem;
+    margin-bottom: 1rem;
+    color: #ffffff;
+    font-size: 1.3rem;
+}
+
+table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+    border: 1px solid var(--border-color);
+    border-radius: 10px;
+    overflow: hidden; /* Para que los bordes redondeados apliquen bien */
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.3);
+}
+
+th, td {
+    padding: 16px;
+    text-align: left;
+    border-bottom: 1px solid var(--border-color);
+}
+
+th {
+    background-color: var(--panel-bg);
+    font-weight: 600;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    font-size: 0.85rem;
+    letter-spacing: 0.05em;
+}
+
+tr:nth-child(odd) {
+    background-color: var(--row-odd);
+}
+
+tr:nth-child(even) {
+    background-color: var(--row-even);
+}
+
+tr:last-child td {
+    border-bottom: none;
+}
+
+tr:hover td {
+    background-color: #333333;
+}
